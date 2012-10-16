@@ -12,8 +12,6 @@ Obsoletes: lpr
 Provides: lpr
 Prereq: /sbin/chkconfig, /etc/rc.d/init.d, mktemp, fileutils, textutils, gawk
 BuildPreReq: gettext
-%{!?nokerberos:BuildPrereq: krb5-devel}
-%{!?nokerberos:Requires: krb5-libs}
 
 %description
 LPRng is an enhanced, extended, and portable implementation of the
@@ -57,8 +55,7 @@ ln -s /usr/share/gettext/po/Makefile.in.in .
 CFLAGS="$RPM_OPT_FLAGS" ; export CFLAGS
 %configure --enable-nls \
 	--with-userid=lp \
-	--with-groupid=lp \
-%{!?nokerberos:--enable-kerberos LDFLAGS="-L/usr/kerberos/lib" CPPFLAGS="-I/usr/kerberos/include" }
+	--with-groupid=lp 
 make MAKEPACKAGE=YES
 
 %install

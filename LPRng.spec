@@ -43,11 +43,11 @@ to add.
 # pick up configure.in changes
 
 # set up gettext
-(
-cd po
-rm Makefile.in.in
-ln -s /usr/share/gettext/po/Makefile.in.in .
-)
+#(
+#cd po
+#rm Makefile.in.in
+#ln -s /usr/share/gettext/po/Makefile.in.in .
+#)
 
 #sh CREATE_CONFIGURE
     

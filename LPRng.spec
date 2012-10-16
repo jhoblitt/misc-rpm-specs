@@ -1,6 +1,6 @@
 Summary: The LPRng print spooler.
 Name: LPRng
-Version: 3.8.28
+Version: 3.8.35
 Release: 1
 License: GPL and Artistic
 Group: System Environment/Daemons

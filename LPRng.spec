@@ -94,11 +94,10 @@ fi
 %config %{_sysconfdir}/printcap
 %attr(644,root,root) %{_sysconfdir}/lpd/lpd.conf.sample
 %attr(644,root,root) %{_sysconfdir}/lpd/lpd.perms.sample
-%attr(644,root,root) %{_sysconfdir}/lpd/lpd
-%attr(644,root,root) %{_sysconfdir}/lpd/lpd.sample
 %attr(644,root,root) %{_sysconfdir}/printcap.sample
 %attr(755,root,root) %{_libdir}/*
 %config %{_sysconfdir}/rc.d/init.d/lpd
+%doc %{_datadir}/LPRng/*
 %attr(755,lp,lp) %{_bindir}/lpq
 %attr(755,lp,lp) %{_bindir}/lprm
 %attr(755,lp,lp) %{_bindir}/lpr
@@ -117,6 +116,8 @@ fi
 %doc CHANGES CONTRIBUTORS COPYRIGHT INSTALL LICENSE 
 %doc README* VERSION Y2KCompliance
 %doc DOCS
+
+%exclude %{_sysconfdir}/rc.d/init.d/lpd.sample
 
 %changelog
 * Thu Nov  13 2003 Patrick Powell <papowell@astart.com> 3.8.23-1

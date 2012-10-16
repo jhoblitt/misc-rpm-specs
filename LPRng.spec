@@ -54,6 +54,7 @@ to add.
 %build
 CFLAGS="$RPM_OPT_FLAGS" ; export CFLAGS
 %configure --enable-nls \
+	--disable-werror \
 	--with-userid=lp \
 	--with-groupid=lp 
 make MAKEPACKAGE=YES

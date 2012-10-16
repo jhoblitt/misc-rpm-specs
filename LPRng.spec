@@ -91,7 +91,6 @@ fi
 %defattr(-,root,root)
 %config %{_sysconfdir}/lpd/lpd.conf
 %config %{_sysconfdir}/lpd/lpd.perms
-%config %{_sysconfdir}/printcap
 %attr(644,root,root) %{_sysconfdir}/lpd/lpd.conf.sample
 %attr(644,root,root) %{_sysconfdir}/lpd/lpd.perms.sample
 %attr(644,root,root) %{_sysconfdir}/printcap.sample
@@ -117,6 +116,7 @@ fi
 %doc README* VERSION Y2KCompliance
 %doc DOCS
 
+%exclude %{_sysconfdir}/printcap
 %exclude %{_sysconfdir}/rc.d/init.d/lpd.sample
 
 %changelog

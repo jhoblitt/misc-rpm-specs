@@ -96,6 +96,7 @@ fi
 %attr(644,root,root) %{_sysconfdir}/printcap.sample
 %attr(755,root,root) %{_libdir}/*
 %config %{_sysconfdir}/rc.d/init.d/lpd
+%attr(755,root,root) %{_sysconfdir}/rc.d/init.d/lpd
 %doc %{_datadir}/LPRng/*
 %attr(755,lp,lp) %{_bindir}/lpq
 %attr(755,lp,lp) %{_bindir}/lprm

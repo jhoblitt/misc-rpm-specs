@@ -1,11 +1,12 @@
 Summary: The LPRng print spooler.
 Name: LPRng
 Version: 3.8.35
-Release: 1
+Release: 2
 License: GPL and Artistic
 Group: System Environment/Daemons
 Source0: ftp://ftp.lprng.com/pub/LPRng/LPRng/%{name}-%{version}.tgz
 Source1: lpd.init
+Patch0: LPRng-3.8.35-el5_build_fix.patch
 URL: http://www.lprng.com
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Obsoletes: lpr
@@ -39,6 +40,8 @@ to add.
 %prep
 
 %setup -q
+
+%patch0 -p1
 
 # pick up configure.in changes
 
